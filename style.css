@@ -1,0 +1,1246 @@
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #EDE3D2;
+    color: #111111;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* ==================================================
+   NAVBAR
+================================================== */
+
+.navbar {
+    width: 100%;
+    padding: 25px 35px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: -0.04em;
+}
+
+.desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.desktop-nav a {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    transition: opacity 0.3s ease;
+}
+
+.desktop-nav a:nth-child(2),
+.desktop-nav a:nth-child(3) {
+    text-transform: lowercase;
+}
+
+.desktop-nav a:hover {
+    opacity: 0.45;
+}
+
+
+/* ==================================================
+   MOBILE NAV
+================================================== */
+
+.menu-button {
+    display: none;
+    border: none;
+    background: transparent;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.mobile-menu {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background: #f1eee8;
+
+    z-index: 100;
+
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 25px;
+
+    transform: translateX(100%);
+    transition: transform 0.45s ease;
+}
+
+.mobile-menu.active {
+    transform: translateX(0);
+}
+
+.mobile-menu a {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 0.85;
+    letter-spacing: -0.06em;
+}
+
+.close-button {
+    position: absolute;
+
+    top: 28px;
+    right: 30px;
+
+    border: none;
+    background: transparent;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero {
+    min-height: 74vh;
+
+    padding: 120px 35px 75px;
+
+    display: grid;
+
+    grid-template-rows:
+        minmax(0, 1fr)
+        100px;
+
+    row-gap: 0px;
+
+    align-items: end;
+}
+
+.hero-title h1 {
+    font-size:
+        clamp(
+            70px,
+            10.8vw,
+            170px
+        );
+
+    font-weight: 800;
+
+    line-height: 0.79;
+
+    letter-spacing: -0.085em;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+}
+
+.hero-description {
+    max-width: 280px;
+
+    align-self: end;
+
+    padding-bottom: 5px;
+}
+
+.hero-description p {
+    font-size: 13px;
+
+    font-weight: 500;
+
+    line-height: 1.35;
+
+    letter-spacing: -0.02em;
+}
+
+
+/* ==================================================
+   BIG STATEMENT
+================================================== */
+
+.statement {
+    padding:
+        180px
+        35px
+        200px;
+}
+
+.statement h2 {
+    max-width: 1150px;
+
+    font-size:
+        clamp(
+            55px,
+            7.8vw,
+            115px
+        );
+
+    font-weight: 750;
+
+    line-height: 0.87;
+
+    letter-spacing: -0.075em;
+}
+
+
+/* ==================================================
+   SECTION
+================================================== */
+
+.section {
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.section-heading {
+    border-top:
+        1px solid
+        #111;
+
+    padding-top: 11px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    line-height: 1;
+
+    text-transform: uppercase;
+}
+
+
+/* ==================================================
+   EXPERTISE
+================================================== */
+
+.expertise {
+    padding-bottom: 190px;
+}
+
+.expertise-list {
+    margin-top: 95px;
+}
+
+.expertise-row {
+    min-height: 125px;
+
+    border-top:
+        1px solid
+        #111;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        5fr;
+
+    align-items: center;
+}
+
+.expertise-row:last-child {
+    border-bottom:
+        1px solid
+        #111;
+}
+
+.row-number {
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.expertise-row h3 {
+    font-size:
+        clamp(
+            38px,
+            5.6vw,
+            85px
+        );
+
+    font-weight: 750;
+
+    line-height: 0.9;
+
+    letter-spacing: -0.065em;
+}
+
+
+/* ==================================================
+   WORK
+================================================== */
+
+.work {
+    padding-bottom: 200px;
+}
+
+.work-item {
+    margin-top: 95px;
+}
+
+.work-title {
+    margin-bottom: 22px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: baseline;
+}
+
+.work-title h2 {
+    font-size:
+        clamp(
+            44px,
+            5.8vw,
+            90px
+        );
+
+    font-weight: 750;
+
+    line-height: 0.85;
+
+    letter-spacing: -0.065em;
+}
+
+.work-title span {
+    font-size: 10px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+}
+
+
+/* ==================================================
+   WORK IMAGES
+================================================== */
+
+.work-image {
+    width: 100%;
+
+    height:
+        min(
+            67vw,
+            780px
+        );
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+
+/* ==================================================
+   IMRSV
+================================================== */
+
+.image-one {
+    background: #d8d6d0;
+    padding: 4%;
+}
+
+.fake-browser {
+    width: 100%;
+    height: 100%;
+
+    background: #f8f7f3;
+
+    box-shadow:
+        0 20px 50px
+        rgba(0, 0, 0, 0.08);
+}
+
+.browser-top {
+    height: 35px;
+
+    border-bottom:
+        1px solid
+        #d7d5d0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding-left: 15px;
+}
+
+.browser-top span {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #777;
+}
+
+.browser-content {
+    height: calc(100% - 35px);
+
+    padding: 7%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+.browser-small {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.browser-large {
+    font-size:
+        clamp(
+            48px,
+            8vw,
+            125px
+        );
+
+    font-weight: 750;
+
+    line-height: 0.78;
+
+    letter-spacing: -0.085em;
+}
+
+.browser-line {
+    width: 100%;
+    height: 1px;
+
+    background: #111;
+}
+
+
+/* ==================================================
+   LOANSTEADY
+================================================== */
+
+.image-two {
+    background: #ddd8ce;
+    padding: 5%;
+}
+
+.loansteady-preview {
+    width: 100%;
+    height: 100%;
+
+    background: #eee9de;
+
+    padding: 4%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.loan-nav {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.loan-content {
+    margin: auto 0;
+
+    max-width: 700px;
+}
+
+.loan-content small {
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+}
+
+.loan-content h3 {
+    margin:
+        25px
+        0
+        30px;
+
+    font-size:
+        clamp(
+            52px,
+            8vw,
+            130px
+        );
+
+    font-weight: 750;
+
+    line-height: 0.77;
+
+    letter-spacing: -0.085em;
+}
+
+.loan-content button {
+    padding: 13px 20px;
+
+    border:
+        1px solid
+        #111;
+
+    background: transparent;
+
+    font-size: 9px;
+    font-weight: 700;
+}
+
+
+/* ==================================================
+   INVIEW
+================================================== */
+
+.image-three {
+    background: #d5d3cd;
+    padding: 4%;
+}
+
+.mail-preview {
+    width: 100%;
+    height: 100%;
+
+    background: #f6f5f1;
+
+    padding: 6%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.mail-left {
+    max-width: 55%;
+}
+
+.mail-logo {
+    font-size: 16px;
+    font-weight: 700;
+
+    margin-bottom: 25%;
+}
+
+.mail-left h3 {
+    font-size:
+        clamp(
+            48px,
+            7vw,
+            110px
+        );
+
+    font-weight: 750;
+
+    line-height: 0.8;
+
+    letter-spacing: -0.085em;
+}
+
+.mail-left p {
+    margin-top: 30px;
+
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+/* ==================================================
+   OCIANICA
+================================================== */
+
+.image-four {
+    background:
+        linear-gradient(
+            145deg,
+            #b6c0bd,
+            #d8d6cc
+        );
+
+    padding: 5%;
+}
+
+.ocean-preview {
+    width: 100%;
+    height: 100%;
+
+    border:
+        1px solid
+        rgba(17,17,17,.4);
+
+    padding: 5%;
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+.ocean-title {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.ocean-text {
+    font-size:
+        clamp(
+            58px,
+            9vw,
+            140px
+        );
+
+    font-weight: 750;
+
+    line-height: 0.75;
+
+    letter-spacing: -0.09em;
+}
+
+
+/* ==================================================
+   PROJECTS
+================================================== */
+
+.projects {
+    padding-bottom: 200px;
+}
+
+.project-grid {
+    margin-top: 95px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    gap:
+        85px
+        25px;
+}
+
+.project-card {
+    display: block;
+}
+
+.project-visual {
+    width: 100%;
+
+    aspect-ratio: 1.28;
+
+    overflow: hidden;
+
+    position: relative;
+
+    transition:
+        transform .45s ease;
+}
+
+.project-card:hover
+.project-visual {
+    transform: scale(.985);
+}
+
+
+/* ==================================================
+   PROJECT CARD
+================================================== */
+
+.loan-card {
+    background: #d7d0c3;
+
+    padding: 7%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+.card-logo {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.card-main {
+    font-size:
+        clamp(
+            40px,
+            5vw,
+            75px
+        );
+
+    font-weight: 750;
+
+    line-height: 0.8;
+
+    letter-spacing: -0.085em;
+}
+
+
+/* BLACK CARD */
+
+.black-card {
+    background: #252525;
+
+    color: #f1eee8;
+
+    padding: 7%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+.black-top {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.black-center {
+    font-size:
+        clamp(
+            48px,
+            6vw,
+            95px
+        );
+
+    font-weight: 750;
+
+    line-height: 0.77;
+
+    letter-spacing: -0.08em;
+}
+
+.black-bottom {
+    font-size: 11px;
+    font-weight: 500;
+}
+
+
+/* OCEAN CARD */
+
+.ocean-card {
+    background:
+        linear-gradient(
+            140deg,
+            #c3cbc6,
+            #aebbb7
+        );
+
+    padding: 7%;
+
+    font-size:
+        clamp(
+            38px,
+            5vw,
+            80px
+        );
+
+    font-weight: 750;
+
+    letter-spacing: -0.075em;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.ocean-card p {
+    margin-top: 10px;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    letter-spacing: .08em;
+}
+
+
+/* IMRSV CARD */
+
+.imrsv-card {
+    background: #e2e0db;
+
+    padding: 7%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+.imrsv-small {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.imrsv-big {
+    font-size:
+        clamp(
+            45px,
+            6vw,
+            95px
+        );
+
+    font-weight: 750;
+
+    line-height: .75;
+
+    letter-spacing: -.085em;
+}
+
+
+/* PROJECT TEXT */
+
+.project-meta {
+    padding-top: 14px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: baseline;
+}
+
+.project-meta h3 {
+    font-size: 14px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+.project-meta span {
+    font-size: 9px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+}
+
+
+/* ==================================================
+   EXPERIENCE
+================================================== */
+
+.experience {
+    min-height: 90vh;
+
+    padding:
+        70px
+        35px
+        120px;
+
+    display: flex;
+
+    align-items: center;
+}
+
+.experience h2 {
+    font-size:
+        clamp(
+            65px,
+            11.2vw,
+            170px
+        );
+
+    font-weight: 750;
+
+    line-height: .76;
+
+    letter-spacing: -.09em;
+}
+
+
+/* ==================================================
+   CONTACT
+================================================== */
+
+.contact {
+    padding-bottom: 140px;
+}
+
+.contact-content {
+    min-height: 75vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+.contact-content p {
+    margin-bottom: 32px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.talk-link {
+    font-size:
+        clamp(
+            90px,
+            16.5vw,
+            255px
+        );
+
+    font-weight: 750;
+
+    line-height: .68;
+
+    letter-spacing: -.095em;
+
+    transition:
+        opacity .3s ease;
+}
+
+.talk-link:hover {
+    opacity: .4;
+}
+
+.email {
+    margin-top: 48px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    text-decoration: underline;
+
+    text-underline-offset: 4px;
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+footer {
+    margin: 0 35px;
+
+    padding:
+        20px
+        0
+        30px;
+
+    border-top:
+        1px solid
+        #111;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        row-gap: 55px;
+
+        min-height: 80vh;
+    }
+
+    .hero-title h1 {
+        white-space: normal;
+    }
+
+    .hero-description {
+        max-width: 360px;
+    }
+
+    .work-image {
+        height: 60vw;
+    }
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        padding:
+            20px;
+    }
+
+    .desktop-nav {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        padding:
+            100px
+            20px
+            70px;
+
+        min-height: auto;
+
+        row-gap: 55px;
+    }
+
+    .hero-title h1 {
+        font-size:
+            clamp(
+                48px,
+                14vw,
+                82px
+            );
+
+        font-weight: 800;
+
+        line-height: .82;
+    }
+
+    .hero-description {
+        max-width: 300px;
+    }
+
+    .hero-description p {
+        font-size: 12px;
+    }
+
+
+    /* STATEMENT */
+
+    .statement {
+        padding:
+            100px
+            20px
+            120px;
+    }
+
+    .statement h2 {
+        font-size:
+            clamp(
+                45px,
+                12vw,
+                70px
+            );
+
+        font-weight: 750;
+
+        line-height: .86;
+    }
+
+
+    /* SECTION */
+
+    .section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+    /* EXPERTISE */
+
+    .expertise {
+        padding-bottom: 120px;
+    }
+
+    .expertise-list {
+        margin-top: 60px;
+    }
+
+    .expertise-row {
+        min-height: 100px;
+
+        grid-template-columns:
+            40px
+            1fr;
+    }
+
+    .expertise-row h3 {
+        font-size:
+            clamp(
+                27px,
+                8vw,
+                45px
+            );
+
+        font-weight: 750;
+    }
+
+
+    /* WORK */
+
+    .work {
+        padding-bottom: 120px;
+    }
+
+    .work-item {
+        margin-top: 65px;
+    }
+
+    .work-title {
+        flex-direction: column;
+
+        gap: 9px;
+    }
+
+    .work-title h2 {
+        font-size: 42px;
+        font-weight: 750;
+    }
+
+    .work-image {
+        height: 95vw;
+    }
+
+
+    /* PROJECTS */
+
+    .projects {
+        padding-bottom: 120px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+
+        row-gap: 60px;
+
+        margin-top: 60px;
+    }
+
+    .project-visual {
+        aspect-ratio: 1.15;
+    }
+
+
+    /* EXPERIENCE */
+
+    .experience {
+        min-height: 70vh;
+
+        padding:
+            60px
+            20px
+            90px;
+    }
+
+    .experience h2 {
+        font-size:
+            clamp(
+                60px,
+                16vw,
+                100px
+            );
+
+        font-weight: 750;
+    }
+
+
+    /* CONTACT */
+
+    .contact {
+        padding-bottom: 90px;
+    }
+
+    .contact-content {
+        min-height: 60vh;
+    }
+
+    .talk-link {
+        font-size:
+            clamp(
+                75px,
+                20vw,
+                125px
+            );
+
+        font-weight: 750;
+    }
+
+    .email {
+        font-size: 10px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        margin:
+            0
+            20px;
+    }
+}
